@@ -44,7 +44,7 @@ function fillSecondForm(data) {
   const state = document.querySelector("#locality_STATE");
   const city = document.querySelector("#address_town_standalone");
   const zip = document.querySelector("#address_zipcode_standalone");
-  const phone = document.querySelector("#phone_number");
+  const phone = document.querySelector("#mobile_number");
   const saveBtn = document.querySelector("#save");
 
   if (ageCheckbox) {
@@ -144,6 +144,14 @@ window.addEventListener("load", () => {
     if (continueBtn) {
       clearInterval(interval);
       continueBtn.click();
+    }
+
+    const introductionDiv = document.querySelector("#introduction");
+    if (introductionDiv) {
+      const myEntryButton = document.querySelector(
+        'a[role="menuitem"][href="/account/lotteryApplications"]'
+      );
+      if (myEntryButton) myEntryButton.click();
     }
 
     // detect add card button
