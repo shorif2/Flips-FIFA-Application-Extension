@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Flips - Fifa SignUp Extension",
-  "version": "2.1",
+  "version": "3.1",
   "description": "Auto-fill login form from API and submit",
   "author": "Shorif Ahamed",
   "icons": {
