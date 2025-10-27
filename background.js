@@ -83,21 +83,21 @@ function fillCardFormInIframe(data) {
   setValue(yearEl, data.year);
   setValue(cvvEl, data.cvv);
 
-  const addNowBtn = document.querySelector(
-    "button.widgetPayNowButton, button.sc-dIUggk.widgetPayNowButton"
-  );
+  // const addNowBtn = document.querySelector(
+  //   "button.widgetPayNowButton, button.sc-dIUggk.widgetPayNowButton"
+  // );
 
-  if (addNowBtn) {
-    console.log("✅ Found 'Add now' button. Clicking...");
-    addNowBtn.click();
-    fetch("http://localhost:3000/data/update-status", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: data.email, status: "Completed" }),
-    });
-  } else {
-    console.warn("❌ 'Add now' button not found.");
-  }
+  // if (addNowBtn) {
+  //   console.log("✅ Found 'Add now' button. Clicking...");
+  //   addNowBtn.click();
+  //   fetch("http://localhost:3000/data/update-status", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ email: data.email, status: "Completed" }),
+  //   });
+  // } else {
+  //   console.warn("❌ 'Add now' button not found.");
+  // }
 
   return true;
 }

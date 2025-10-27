@@ -146,6 +146,17 @@ window.addEventListener("load", () => {
       continueBtn.click();
     }
 
+    // Detect Entry Submitted state
+    const isSubmitted = document.querySelector(".sc-FyeoB");
+    if (isSubmitted) {
+      fetch("http://localhost:3000/api/update-status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: data.email, status: "Done" }),
+      });
+    }
+
+    // Navigate to "My Entry" page
     const introductionDiv = document.querySelector("#introduction");
     if (introductionDiv) {
       const myEntryButton = document.querySelector(
@@ -160,6 +171,7 @@ window.addEventListener("load", () => {
         btn.innerText.trim() === "Add a new card" ||
         btn.getAttribute("aria-label") === "Add a new card"
     );
+
     // detect "Enter Draw" button
     const enterDrawBtn = [...document.querySelectorAll("button")].find(
       (btn) =>
